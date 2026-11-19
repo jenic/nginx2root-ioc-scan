@@ -1,0 +1,12 @@
+.idea/
+bin/
+dist/
+third_party/
+.gocache/
+.gocache-tests/
+.gomodcache/
+.cache/
+*.out
+*.swp
+*~
+go.work
