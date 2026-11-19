@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"os"
 	"path/filepath"
+	"strconv"
 	"strings"
 	"testing"
 
@@ -51,7 +52,10 @@ func TestVerboseOutputShowsMatchingRequestsAndFiles(t *testing.T) {
 		t.Fatalf("Run() exit code = %d, stdout=%q stderr=%q", exitCode, stdout.String(), stderr.String())
 	}
 	output := stdout.String()
-	for _, wanted := range []string{"files:", headLog, partialLog, "match:", `"HEAD /a HTTP/2.0"`, `"GET /range HTTP/2.0"`} {
+	for _, wanted := range []string{
+		"files:", strconv.Quote(headLog), strconv.Quote(partialLog),
+		"match:", `"HEAD /a HTTP/2.0"`, `"GET /range HTTP/2.0"`,
+	} {
 		if !strings.Contains(output, wanted) {
 			t.Errorf("verbose output missing %q: %s", wanted, output)
 		}
