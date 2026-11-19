@@ -20,7 +20,7 @@ EXE := $(if $(filter windows,$(TARGET_OS)),.exe,)
 OUT ?= bin/$(BINARY)$(EXE)
 BUILD_FLAGS ?= -trimpath -buildvcs=false
 MOD_FLAG ?= -mod=readonly
-LDFLAGS ?= -s -w -buildid= -X github.com/sfewer-r7/nginx2root-ioc-scan/internal/build.Version=$(VERSION) -X github.com/sfewer-r7/nginx2root-ioc-scan/internal/build.Commit=$(COMMIT)
+LDFLAGS ?= -s -w -buildid= -X github.com/jenic/nginx2root-ioc-scan/internal/build.Version=$(VERSION) -X github.com/jenic/nginx2root-ioc-scan/internal/build.Commit=$(COMMIT)
 RELEASE_TARGETS := darwin/amd64 darwin/arm64 linux/amd64 linux/arm64 windows/amd64 windows/arm64
 RELEASE_ARCHIVES := \
 	dist/$(BINARY)_darwin_amd64.tar.gz \

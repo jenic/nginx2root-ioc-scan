@@ -49,7 +49,7 @@ class ReleaseTests(unittest.TestCase):
                 self.assertIn(f"tag={tag}\n", output)
                 self.assertIn(f"prerelease={prerelease}\n", output)
                 self.assertIn(
-                    "module_path=github.com/sfewer-r7/nginx2root-ioc-scan\n", output
+                    "module_path=github.com/jenic/nginx2root-ioc-scan\n", output
                 )
 
     def test_invalid_tags_fail_before_release_work(self):

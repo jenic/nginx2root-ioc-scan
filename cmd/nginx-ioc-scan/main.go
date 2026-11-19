@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/sfewer-r7/nginx2root-ioc-scan/internal/cli"
+	"github.com/jenic/nginx2root-ioc-scan/internal/cli"
 )
 
 func main() {

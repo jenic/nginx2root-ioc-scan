@@ -15,9 +15,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/sfewer-r7/nginx2root-ioc-scan/internal/analyzer"
-	"github.com/sfewer-r7/nginx2root-ioc-scan/internal/build"
-	"github.com/sfewer-r7/nginx2root-ioc-scan/internal/cfg"
+	"github.com/jenic/nginx2root-ioc-scan/internal/analyzer"
+	"github.com/jenic/nginx2root-ioc-scan/internal/build"
+	"github.com/jenic/nginx2root-ioc-scan/internal/cfg"
 )
 
 const maxLogLineBytes = 1024 * 1024
